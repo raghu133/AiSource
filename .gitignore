@@ -1,0 +1,124 @@
+# =========================
+# Security / Secrets (do not commit)
+# =========================
+.env
+.env.*
+!.env.example
+!.env.template
+
+# Keys / certs / credentials
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+*.jks
+*.kdbx
+*.asc
+*secret*
+*password*
+*credential*
+
+# License artifacts / machine-bound data
+license_db.sqlite
+*.lic
+*.license
+*.licence
+*license*.db
+*licence*.db
+# *machineid*
+
+# =========================
+# Local databases
+# =========================
+*.sqlite
+*.sqlite3
+*.db
+*.mdb
+*.accdb
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+.python-version
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# =========================
+# Build / packaging
+# =========================
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+*.manifest
+*.exe.manifest
+*.spec.bak
+
+# PyInstaller cache/spec output
+*.toc
+*.pkg
+*.pyz
+*.zip
+
+# =========================
+# Test / lint / coverage
+# =========================
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# =========================
+# Logs / temp
+# =========================
+*.log
+*.pid
+*.tmp
+*.temp
+
+# =========================
+# IDE / OS
+# =========================
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+Thumbs.db
+Desktop.ini
+
+# =========================
+# App-generated runtime data
+# =========================
+learned_data.json
+learned_data_dinov3.json
+learned_meta.json
+learned_embeddings.json
+empty_tray_baseline.jpg
+empty_cover_baseline.jpg
+thumbs/
+*.bak
+scratch/
+
+# Local media/output dumps
+Imgs/
+
+# Large ML model weights and checkpoints (exceeds GitHub 100MB limit)
+models/*.onnx
+models/*.data
+models/*.onnx_data
+models/*.model
+signatures/siglip_text_cache.json

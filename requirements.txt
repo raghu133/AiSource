@@ -1,0 +1,14 @@
+PySide6
+opencv-python
+numpy
+pyodbc
+pyautogui
+cryptography
+dotenv
+pyttsx3
+torch
+onnxruntime
+sentencepiece
+transformers
+onnx
+onnxscript

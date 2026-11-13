@@ -1,0 +1,115 @@
+{
+  "scale": {
+    "enabled": false,
+    "port": "COM4",
+    "baud": 9600,
+    "stable_seconds": 0.17,
+    "open_threshold": 0.001
+  },
+  "camera": {
+    "enabled": true,
+    "index": 0,
+    "polygon": [
+      [
+        11,
+        17
+      ],
+      [
+        623,
+        20
+      ],
+      [
+        622,
+        457
+      ],
+      [
+        13,
+        459
+      ]
+    ],
+    "show_boundary": true,
+    "empty_baseline_path": "C:\\Users\\91984\\AiSourceCode\\empty_tray_baseline.jpg",
+    "empty_baseline_polygon": [
+      [
+        11,
+        17
+      ],
+      [
+        623,
+        20
+      ],
+      [
+        622,
+        457
+      ],
+      [
+        13,
+        459
+      ]
+    ],
+    "empty_cover_baseline_path": "C:\\Users\\91984\\AiSourceCode\\empty_cover_baseline.jpg",
+    "empty_cover_baseline_polygon": [
+      [
+        11,
+        17
+      ],
+      [
+        623,
+        20
+      ],
+      [
+        622,
+        457
+      ],
+      [
+        13,
+        459
+      ]
+    ],
+    "empty_diff_threshold": 0.015,
+    "blur_lap_var_min": 35.0,
+    "lock_exposure": true,
+    "manual_exposure": -6.0,
+    "lock_white_balance": true,
+    "manual_wb_temperature": 4500
+  },
+  "db": {
+    "enabled": true,
+    "driver": "ODBC Driver 17 for SQL Server",
+    "server": "localhost\\SQLEXPRESS",
+    "database": "SEYON",
+    "user": "ilt",
+    "password": "ilt",
+    "uom_filter": "KG",
+    "table": "tblInventory",
+    "col_code": "InventoryCode",
+    "col_name": "Description",
+    "col_uom": "UOM",
+    "col_brand": "BrandCode",
+    "col_price": "RetailPrice"
+  },
+  "qr": {
+    "prefix_value": "20",
+    "code_len": 5,
+    "price_len": 5,
+    "qty_len": 5
+  },
+  "behavior": {
+    "match_threshold": 0.55,
+    "max_samples": 40,
+    "confidence_margin": 0.03,
+    "appear_min_hits": 2,
+    "top_matches_count": 3,
+    "confusion_margin": 0.12,
+    "weight_gating": false
+  },
+  "boundary": {
+    "match_threshold": 0.55,
+    "min_area_ratio": 0.15,
+    "max_samples": 40
+  },
+  "currency": {
+    "code": "INR",
+    "symbol": "\u20b9"
+  }
+}

@@ -1,0 +1,19 @@
+Machine ID EXE Build (PyInstaller)
+
+1) Open terminal in:
+   D:\iLogic Source Codes\AIPOS\AI_Trainer\MachineID
+
+2) (Optional) Activate virtual environment from project root:
+   ..\.venv\Scripts\Activate.ps1
+
+3) Install required packages:
+   pip install PySide6 pyinstaller
+
+4) Build using spec file:
+   pyinstaller --noconfirm .\MachineID.spec
+
+5) Output:
+   dist\MachineID\MachineID.exe
+
+Alternative one-file build command:
+pyinstaller --noconfirm --onefile --windowed --name MachineID .\machine_id_retriever.py

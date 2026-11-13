@@ -1,0 +1,65 @@
+# -*- mode: python ; coding: ascii -*-
+
+import os
+from PyInstaller.utils.hooks import collect_submodules
+
+
+block_cipher = None
+
+project_dir = os.path.abspath(os.getcwd())
+
+datas = [
+    (os.path.join(project_dir, "dashboard.ui"), "."),
+    (os.path.join(project_dir, "logo.png"), "."),
+    (os.path.join(project_dir, ".env"), "."),
+    (os.path.join(project_dir, "icons"), "icons"),
+]
+
+hiddenimports = collect_submodules("PySide6")
+
+a = Analysis(
+    ["main.py"],
+    pathex=[project_dir],
+    binaries=[],
+    datas=datas,
+    hiddenimports=hiddenimports,
+    hookspath=[],
+    hooksconfig={},
+    runtime_hooks=[],
+    excludes=['PyQt5', 'PyQt6'],
+    win_no_prefer_redirects=False,
+    win_private_assemblies=False,
+    cipher=block_cipher,
+    noarchive=False,
+)
+
+pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
+
+exe = EXE(
+    pyz,
+    a.scripts,
+    [],
+    exclude_binaries=True,
+    name="AI_Trainer",
+    debug=False,
+    bootloader_ignore_signals=False,
+    strip=False,
+    upx=True,
+    console=False,
+    disable_windowed_traceback=False,
+    argv_emulation=False,
+    target_arch=None,
+    codesign_identity=None,
+    entitlements_file=None,
+)
+
+coll = COLLECT(
+    exe,
+    a.binaries,
+    a.zipfiles,
+    a.datas,
+    strip=False,
+    upx=True,
+    upx_exclude=[],
+    name="AI_Trainer",
+)

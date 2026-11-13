@@ -1,0 +1,20 @@
+License Generator EXE Build (PyInstaller)
+
+1) Open terminal in project root:
+   D:\iLogic Source Codes\AIPOS\AI_Trainer
+
+2) (Optional) Activate virtual environment:
+   .\.venv\Scripts\Activate.ps1
+
+3) Install required packages:
+   pip install -r requirements.txt
+   pip install pyinstaller python-dotenv
+
+4) Build using spec file:
+   pyinstaller --noconfirm .\LicenceGenerator.spec
+
+5) Output:
+   dist\LicenceGenerator\LicenceGenerator.exe
+
+Alternative one-file build command (single EXE):
+pyinstaller --noconfirm --onefile --windowed --name LicenceGenerator .\licence_generator.py

@@ -1,0 +1,19 @@
+# Manual build for main2 with DINOv3:
+.\.venv\Scripts\pyinstaller.exe --noconfirm --clean main2.spec
+
+# Run the generated EXE:
+cd dist\AI_Trainer
+.\AI_Trainer.exe
+
+# Run main2 directly with Python:
+.\.venv\Scripts\python.exe main2.py
+
+
+without spec
+
+
+pyinstaller --noconfirm --clean --onedir --windowed --name AI_Trainer  --add-data "dashboard.ui;."  --add-data "logo.png;."  --add-data ".env;."  main.py
+
+
+pyinstaller --onefile --windowed --name License_Generator licence_generator.py
+version 8 commit line
